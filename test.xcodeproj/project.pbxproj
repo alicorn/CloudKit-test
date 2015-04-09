@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C987BEA1AD6651F005E38D1 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C987BE91AD6651F005E38D1 /* CloudKit.framework */; };
 		D73C90D71AD597A5007F85CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73C90D61AD597A5007F85CE /* AppDelegate.swift */; };
 		D73C90DA1AD597A5007F85CE /* test.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D73C90D81AD597A5007F85CE /* test.xcdatamodeld */; };
 		D73C90DC1AD597A5007F85CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73C90DB1AD597A5007F85CE /* ViewController.swift */; };
@@ -27,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6C987BE81AD6651D005E38D1 /* test.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = test.entitlements; sourceTree = "<group>"; };
+		6C987BE91AD6651F005E38D1 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		D73C90D11AD597A5007F85CE /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D73C90D51AD597A5007F85CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D73C90D61AD597A5007F85CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C987BEA1AD6651F005E38D1 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +65,7 @@
 		D73C90C81AD597A5007F85CE = {
 			isa = PBXGroup;
 			children = (
+				6C987BE91AD6651F005E38D1 /* CloudKit.framework */,
 				D73C90D31AD597A5007F85CE /* test */,
 				D73C90EC1AD597A5007F85CE /* testTests */,
 				D73C90D21AD597A5007F85CE /* Products */,
@@ -79,6 +84,7 @@
 		D73C90D31AD597A5007F85CE /* test */ = {
 			isa = PBXGroup;
 			children = (
+				6C987BE81AD6651D005E38D1 /* test.entitlements */,
 				D73C90D61AD597A5007F85CE /* AppDelegate.swift */,
 				D73C90DB1AD597A5007F85CE /* ViewController.swift */,
 				D73C90DD1AD597A5007F85CE /* Main.storyboard */,
@@ -164,6 +170,12 @@
 				TargetAttributes = {
 					D73C90D01AD597A5007F85CE = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = 44P4G4HCCY;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					D73C90E81AD597A5007F85CE = {
 						CreatedOnToolsVersion = 6.3;
@@ -344,6 +356,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = test/test.entitlements;
 				INFOPLIST_FILE = test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -354,6 +367,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = test/test.entitlements;
 				INFOPLIST_FILE = test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -413,6 +427,7 @@
 				D73C90F51AD597A5007F85CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D73C90F61AD597A5007F85CE /* Build configuration list for PBXNativeTarget "testTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +436,7 @@
 				D73C90F81AD597A5007F85CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
